@@ -7,7 +7,7 @@ import { AnimatedTooltip } from "../ui/animated-tooltip";
 import { technologiesWithDetails } from "@/constants/technologiesLogos";
 
 const About = () => {
-  const words = ["creative", "meticulous", "imaginative", "innovative"];
+  const words = ["creative", "reliable", "efficient", "versatile"];
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
