@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import About from "@/components/page-sections/AboutPage";
 import ContactPage from "@/components/page-sections/ContactPage";
 import HomePage from "@/components/page-sections/HomePage";
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <ProjectsSection/>
       <ContactPage/>
+      <Footer/>
     </div>
   );
 }

@@ -20,7 +20,7 @@ const About = () => {
   const logos = technologiesWithDetails;
 
   return (
-    <div className="mt-10 lg:mt-60 flex flex-col justify-center items-center">
+    <div id="about" className="mt-10 lg:mt-60 flex flex-col justify-center items-center">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 20 }}

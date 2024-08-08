@@ -20,7 +20,7 @@ export function ProjectsSection() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
+    <div id="projects" className="w-full h-full py-20">
       <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
         What I&apos;ve Been Working On
       </h2>
