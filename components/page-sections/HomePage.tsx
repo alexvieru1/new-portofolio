@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { AnimatedBall } from "../ui/animated-ball";
 
 const title = "AV";
-const subtitle = "Web Design";
+const subtitle = "Crafting Digital Experiences";
 
 const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <WavyBackground className="max-w-5xl mx-auto pb-40 ">
+      <WavyBackground className="max-w-5xl mx-auto pb-40">
         <div className="flex flex-col justify-center items-center select-none mt-36">
           <motion.div
             initial="hidden"
@@ -51,27 +51,27 @@ const HomePage = () => {
               visible: {
                 transition: {
                   staggerChildren: 0.1, // Staggering each letter by 0.1 second for a shorter animation
-                  delayChildren: 2.5, // Delay before starting the animation for "Developer"
+                  delayChildren: 2.5, // Delay before starting the animation for "Crafting Digital Experiences"
                 },
               },
             }}
-            className="flex items-center justify-center text-white font-semibold pointer-events-none text-4xl text-center md:text-5xl lg:text-5xl"
+            className="flex flex-wrap items-center justify-center text-white font-semibold pointer-events-none text-4xl text-center md:text-5xl lg:text-5xl"
           >
-            {subtitle.split("").map((letter, index) => (
+            {subtitle.split(" ").map((word, index) => (
               <motion.span
                 key={index}
                 variants={{
                   hidden: { opacity: 0, y: 100 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                transition={{ duration: 0.5 }} // Duration of 0.5 seconds for each letter animation
-                className={letter === " " ? "inline-block w-6" : ""}
+                transition={{ duration: 0.5 }} // Duration of 0.5 seconds for each word animation
+                className="block w-full md:w-auto md:inline-block"
               >
-                {letter === " " ? "\u00A0" : letter}
+                {word}&nbsp;
               </motion.span>
             ))}
           </motion.div>
-          <div className="mt-40">
+          <div className="mt-32">
             <AnimatedBall />
           </div>
         </div>
