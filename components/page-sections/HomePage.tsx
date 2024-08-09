@@ -5,7 +5,8 @@ import { AnimatedBall } from "../ui/animated-ball";
 import { BackgroundGradientAnimation } from "../ui/background-gradient-animation";
 
 const title = "AV";
-const subtitle = "Crafting Digital Experiences";
+const subtitle = "Crafting Digital";
+const secondSubtitle = "Experiences";
 
 const HomePage = () => {
   return (
@@ -56,6 +57,8 @@ const HomePage = () => {
               </motion.span>
             ))}
           </motion.div>
+
+          {/* First Subtitle */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -64,7 +67,7 @@ const HomePage = () => {
               visible: {
                 transition: {
                   staggerChildren: 0.05, // Staggering each letter by 0.05 second for a quicker animation
-                  delayChildren: 2.5, // Delay before starting the animation for "Crafting Digital Experiences"
+                  delayChildren: 2.5, // Delay before starting the animation for "Crafting Digital"
                 },
               },
             }}
@@ -84,7 +87,38 @@ const HomePage = () => {
               </motion.span>
             ))}
           </motion.div>
-          <div className="mt-32">
+
+          {/* Second Subtitle with Delay */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.05, // Staggering each letter by 0.05 second for a quicker animation
+                  delayChildren: 3.5, // Delay before starting the animation for "Experiences"
+                },
+              },
+            }}
+            className="flex flex-wrap items-center justify-center text-white font-semibold pointer-events-none text-4xl text-center md:text-5xl lg:text-5xl"
+          >
+            {secondSubtitle.split("").map((letter, index) => (
+              <motion.span
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, y: 100 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.5 }} // Duration of 0.5 seconds for each letter animation
+                className={letter === " " ? "inline-block w-2" : ""}
+              >
+                {letter === " " ? "\u00A0" : letter}
+              </motion.span>
+            ))}
+          </motion.div>
+
+          <div className="mt-40 md:mt-32 lg:mt-8">
             <AnimatedBall />
           </div>
         </div>

@@ -29,7 +29,7 @@ export const AnimatedBall = () => {
       ease: "easeOut",
     },
     opacity: {
-      delay: 3,
+      delay: 4.5,
     },
   };
 
